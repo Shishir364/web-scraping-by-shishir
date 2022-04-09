@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather_scraping</title>
+    <link href="{% static 'styles.css' %}" rel="stylesheet" />
+</head>
+
+<body>
+    <div class = "div">
+        <div id= "div1">
+        <h1>Weather Scraping </h1>
+        <form method="get">
+            <input type="text" name="city" id="city"> <br>
+            <input type="submit" value="submit">
+        </form> 
+        {% if result %}
+        <div id= "div2">
+            <span> {{result.region }}</span><br>
+            <span> {{result.temp_now}}</span><br>
+            <span> {{result.dayhour}}</span><br>
+            <span> {{result.weather_now }}</span><br>
+
+            
+            {% if  "clear" in result.weather_now  %}
+                <style>
+
+                    body{
+                        background-image: url("{% static 'clear.jpg'%}");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+            {% elif   "sunny" in result.weather_now  %}
+                <style>
+                    body{
+                        background-image: url("{% static 'clear.jpg'%}");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+            {% elif "rain" in result.weather_now %}
+                <style>
+                    body{
+                        background-image: url("{% static 'rain.jpg'%}");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+            {% elif "haze" in result.weather_now %}
+                <style>
+                    body{
+                        background-image: url("{% static 'haze.jpg'%}");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+            {% elif "thander" in result.weather_now %}
+                <style>
+                    body{
+                        background-image: url("{% static 'thanderstrom.jpg'%}");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+            {% elif "cloudy" in result.weather_now %}
+                <style>
+                    body{
+                        background-image: url("{% static 'cloudy.jpg'%}");
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                </style>
+            {% endif %}
+            
+        </div>
+        {% endif %}
+        
+        </div>
+    </div>
+</body>
+</html> 

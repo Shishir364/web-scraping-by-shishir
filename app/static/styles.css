@@ -1,0 +1,76 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#div1{
+    margin-top: 20px;
+    position: relative;
+    text-align: center;
+}
+
+input[type=text]{
+    width: 25%;
+    height: 30px;
+    border: 2px solid black;
+    text-align: left;
+    font-weight: 700;
+    font-size: x-large;
+
+}
+input[type=submit]{
+    width: 25%;
+    height: 30px;
+    border: 2px solid black;
+    font-weight: 700;
+    font-size: x-large;
+    background-color:rgb(31, 178, 198);
+    margin-top: 15px;
+
+}
+input[type=text]:hover{
+    width: 25%;
+    height: 30px;
+    border: 2px solid rgb(8, 7, 7);
+    text-align: left;
+    font-weight: 700;
+    font-size: x-large;
+    box-shadow: 5px 15px 35px rgb(144, 212, 235);
+    text-decoration: double;
+
+}
+input[type=submit]:hover{ 
+    width: 25%;
+    height: 30px;
+    border: 2px solid black;
+    font-weight: 700;
+    font-size: x-large;
+    background-color:rgb(5, 209, 250);
+    margin-top: 15px;
+    box-shadow: 5px 15px 35px  rgb(31, 178, 198);
+    text-transform: uppercase;
+
+}
+h1:hover{
+    text-shadow: 5px 10px 20px rebeccapurple;
+    cursor:pointer;
+}
+
+#div2{
+    font-family: monospace;
+    font-weight: 600;
+    font-size: xx-large;
+    margin-top: 30px;
+    text-align: center;
+    margin-right: 37%;
+}
+span{
+    float: right;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+span:hover{
+    float: right;
+    text-shadow: 0px 5px 5px rgba(0, 0, 0, 1);
+    cursor:default;
+}
